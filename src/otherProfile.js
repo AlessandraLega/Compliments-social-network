@@ -11,8 +11,8 @@ export default class OtherProfile extends React.Component {
             friends: false,
         };
     }
-    async componentDidMount() {
-        const { id } = this.props.match.params;
+    async componentDidMount(props) {
+        const { id } = props.match.params;
         axios.get("/other-user/" + id).then(({ data }) => {
             if (data.sameUser) {
                 this.props.history.push("/");
