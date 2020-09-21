@@ -29,12 +29,16 @@ export default function Wall({ id }) {
         document.querySelector("textarea").value = "";
     };
 
-    /*     const convertDate = (date) => {
-        return new Intl.DateTimeFormat("de-DE", "default", {
-            hour: "numeric",
-            minute: "numeric",
-        }).format(date);
-    }; */
+    const convertDate = (date) => {
+        let d = new Date(date);
+        return d.toLocaleString("en-UK", {
+            year: "2-digit",
+            month: "2-digit",
+            day: "2-digit",
+            hour: "2-digit",
+            minute: "2-digit",
+        });
+    };
 
     return (
         <div id="wall">
@@ -53,7 +57,9 @@ export default function Wall({ id }) {
                         <div className="post-container" key={i}>
                             <p className="sender">
                                 {post.first} {post.last}{" "}
-                                <span className="date">{post.created_at}</span>
+                                <span className="date">
+                                    {convertDate(post.created_at)}
+                                </span>
                             </p>
                             <div className="pic-message">
                                 <img
