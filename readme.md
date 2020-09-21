@@ -30,7 +30,7 @@ Users who forgot their password can reset it. An e-mail will be sent with AWS SE
 <img src="./public/readme/login.PNG" width="50%"/>
 <img src="./public/readme/resetpassword.PNG" />
 <img src="./public/readme/insertcode.PNG" />
-<img src="./public/readme/email.PNG" />
+<img src="./public/readme/email.JPG" />
 
 After registration or login, users come to their profile page:
 
