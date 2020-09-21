@@ -26,10 +26,13 @@ Social network allowing users to search, add and delete friends, post compliment
 Users are welcomed with a page that allows them to register or login, in case they have a profile already.
 <img src="./public/readme/register.PNG" width="48%" />
 <img src="./public/readme/login.PNG" width="48%"/>
+<br>
 Users who forgot their password can reset it.
 An e-mail will be sent with AWS SES to the given address with a random code. The code will be valid only 10 minutes.
+<br>
 <img src="./public/readme/resetpassword.PNG" width="48%"/>
 <img src="./public/readme/insertcode.PNG" width="48%"/>
+<br>
 <img src="./public/readme/email.JPG" />
 
 After registration or login, users come to their profile page:
