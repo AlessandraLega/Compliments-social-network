@@ -11,8 +11,8 @@ export default class OtherProfile extends React.Component {
             friends: false,
         };
     }
-    async componentDidMount(props) {
-        const { id } = props.match.params;
+    async componentDidMount() {
+        const { id } = this.props.match.params;
         axios.get("/other-user/" + id).then(({ data }) => {
             if (data.sameUser) {
                 this.props.history.push("/");
@@ -33,6 +33,7 @@ export default class OtherProfile extends React.Component {
         });
     }
     render() {
+        console.log("this.state :", this.state);
         return (
             <div id="profile-container">
                 {this.state.error && <p>this user does not exist!</p>}

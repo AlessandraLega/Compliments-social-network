@@ -221,12 +221,13 @@ app.post("/bio", (req, res) => {
 
 app.get("/other-user/:id", (req, res) => {
     const id = req.params.id;
-    // console.log("id", id);
+    console.log("id", id);
     if (id == req.session.id) {
         res.json({ sameUser: true });
     } else {
         db.getOtherUser(id)
             .then((results) => {
+                console.log("results.rows[0] :", results.rows[0]);
                 res.json(results.rows[0]);
             })
             .catch((err) => {
@@ -336,11 +337,12 @@ app.get("/logout", (req, res) => {
 app.get("/all-posts/:id", (req, res) => {
     let id = req.params.id;
     db.getAllPosts(id)
-        .then((results) => {
-            if (results.rows.length) {
-                res.json(results.rows);
+        .then(({ rows }) => {
+            console.log("rows :", rows);
+            if (rows.length) {
+                res.json(rows);
             } else {
-                console.log("no friends!");
+                console.log("no posts!");
                 res.json({ success: false });
             }
         })
