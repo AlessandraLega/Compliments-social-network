@@ -1,8 +1,8 @@
-# COMPLIMENTS - social network
+# COMPLIMENTS social network
 
 ## Description:
 
-Single-page application website made with React that allows users to join a social network. Users can search, add and delete friends, post compliments on each other’s wall, compliment other online users on a chat and receive real-time notifications.
+Social network allowing users to search, add and delete friends, post compliments on each other’s wall, compliment other online users on a chat and receive real-time notifications.
 
 ## Developed with:
 
